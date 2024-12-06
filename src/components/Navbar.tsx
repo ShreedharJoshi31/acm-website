@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Code2 } from 'lucide-react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, Code2 } from "lucide-react";
+import { motion } from "framer-motion";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
   const links = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/events', label: 'Events' },
-    { href: '/teams', label: 'Teams' },
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/events", label: "Events" },
+    { href: "/teams", label: "Teams" },
   ];
 
   return (
@@ -29,19 +29,21 @@ export const Navbar = () => {
               <Link
                 key={link.href}
                 to={link.href}
-                className={`relative ${
+                className={`relative py-1 group ${
                   location.pathname === link.href
-                    ? 'text-blue-500'
-                    : 'text-gray-300 hover:text-white'
+                    ? "text-blue-500"
+                    : "text-gray-300 hover:text-white"
                 }`}
               >
-                {location.pathname === link.href && (
-                  <motion.div
-                    layoutId="underline"
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-blue-500"
-                  />
-                )}
                 {link.label}
+                <span
+                  className={`absolute bottom-0 left-0 w-full h-0.5 bg-blue-500 transform origin-left transition-transform duration-300 ease-out
+                    ${
+                      location.pathname === link.href
+                        ? "scale-x-100"
+                        : "scale-x-0 group-hover:scale-x-100"
+                    }`}
+                />
               </Link>
             ))}
             <button className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors">
@@ -71,8 +73,8 @@ export const Navbar = () => {
                 to={link.href}
                 className={`block py-2 ${
                   location.pathname === link.href
-                    ? 'text-blue-500'
-                    : 'text-gray-300 hover:text-white'
+                    ? "text-blue-500"
+                    : "text-gray-300 hover:text-white"
                 }`}
                 onClick={() => setIsOpen(false)}
               >
