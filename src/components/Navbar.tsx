@@ -20,7 +20,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2">
             <Code2 className="w-8 h-8 text-blue-500" />
-            <span className="text-xl font-bold">ACM Chapter</span>
+            <span className="text-xl font-bold">ACM Professional Chapter</span>
           </Link>
 
           {/* Desktop Navigation */}

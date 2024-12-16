@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Code2 } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Code2 } from "lucide-react";
 
 export const AboutHero = () => {
   return (
@@ -13,12 +13,15 @@ export const AboutHero = () => {
           className="max-w-3xl mx-auto text-center"
         >
           <Code2 className="w-16 h-16 text-blue-500 mx-auto mb-6" />
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">SAKEC ACM Professional Chapter</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            SAKEC ACM Professional Chapter
+          </h1>
           <p className="text-xl text-gray-300">
-            A dynamic platform for computing professionals, academics, and students within the local community.
+            A vibrant hub for computing professionals, academics, and students,
+            fostering collaboration and growth within the local community.
           </p>
         </motion.div>
       </div>
     </section>
   );
-}
+};

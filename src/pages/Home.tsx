@@ -6,8 +6,10 @@ import { Highlights } from "../components/Highlights";
 import { WhyJoinUs } from "../components/WhyJoinUs";
 import { Stats } from "../components/Stats";
 import { AnimatedHeroBackground } from "../components/AnimatedHeroBackground";
+import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
+  const navigate = useNavigate();
   return (
     <div>
       {/* Hero Section */}
@@ -22,25 +24,29 @@ export const Home = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center gap-2 mb-6">
+              {/* <div className="flex items-center gap-2 mb-6">
                 <Code2 className="w-8 h-8 text-blue-500" />
                 <span className="text-xl font-semibold text-blue-500">
-                  ACM Chapter
+                  ACM Professional Chapter
                 </span>
-              </div>
+              </div> */}
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-                Empowering Innovators, Shaping the Future
+                SAKEC ACM'S PROFESSIONAL CHAPTER
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Join our premier hub for computing enthusiasts, tech leaders,
-                and innovators.
+                A community of curious minds pushing the boundaries of computer
+                science, where the minds Meet Technology for Groundbreaking
+                Ideas
               </p>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  navigate("/about");
+                }}
                 className="group bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center gap-2 hover:bg-blue-700 transition-all"
               >
-                Join Us
+                Know More
                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.button>
             </motion.div>
@@ -89,7 +95,7 @@ export const Home = () => {
         </div>
       </section>
 
-      <CoreDomains />
+      {/* <CoreDomains /> */}
       {/* <Highlights /> */}
       <WhyJoinUs />
       {/* <Stats /> */}
