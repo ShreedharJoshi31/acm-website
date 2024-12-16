@@ -5,82 +5,71 @@ import { useInView } from "../hooks/useInView";
 
 const teamMembers = [
   {
-    name: "Shreedhar Joshi",
-    role: "Chapter President",
-    image:
-      "https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=800",
-    bio: "Leading with innovation and passion for technology",
-    funFact: "Completed 100 Days of Code challenge twice",
-    social: {
-      github: "#",
-      linkedin: "#",
-      twitter: "#",
-    },
+    name: "Dr. Bhavesh Patel",
+    role: "Chair",
+    image: "/bhavesh_patel.png",
+    designation: "Principal & Professor ,SAKEC",
   },
   {
-    name: "Shreedhar Joshi",
-    role: "Chapter President",
-    image:
-      "https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=800",
-    bio: "Leading with innovation and passion for technology",
-    funFact: "Completed 100 Days of Code challenge twice",
-    social: {
-      github: "#",
-      linkedin: "#",
-      twitter: "#",
-    },
+    name: "Ms.Swati Nadkarni",
+    role: "Chapter PresiVice Chairdent",
+    image: "/swati_nadkarni.png",
+    designation: "Associate Professor,SAKEC",
   },
   {
-    name: "Shreedhar Joshi",
-    role: "Chapter President",
-    image:
-      "https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=800",
-    bio: "Leading with innovation and passion for technology",
-    funFact: "Completed 100 Days of Code challenge twice",
-    social: {
-      github: "#",
-      linkedin: "#",
-      twitter: "#",
-    },
+    name: "Dr.Shashikant Patil",
+    role: "Secretary",
+    image: "/shashikant_patil.png",
+    designation:
+      "Senior Director and Professor, Atlas SkillTech University Mumbai",
   },
   {
-    name: "Shreedhar Joshi",
-    role: "Chapter President",
-    image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800",
-    bio: "Leading with innovation and passion for technology",
-    funFact: "Completed 100 Days of Code challenge twice",
-    social: {
-      github: "#",
-      linkedin: "#",
-      twitter: "#",
-    },
+    name: "Ms.Pramila Shinde",
+    role: "Treasurer",
+    image: "/pramila_shinde.png",
+    designation: "Assistant Professor,SAKEC",
   },
   {
-    name: "Shreedhar Joshi",
-    role: "Chapter President",
-    image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800",
-    bio: "Leading with innovation and passion for technology",
-    funFact: "Completed 100 Days of Code challenge twice",
-    social: {
-      github: "#",
-      linkedin: "#",
-      twitter: "#",
-    },
+    name: "Dr.Sunil Kumar Kopparapu",
+    role: "Industry Connect Head",
+    image: "sunil_kumar.png",
+    designation: "Principal Scientist, TCS Research",
   },
   {
-    name: "Shreedhar Joshi",
-    role: "Chapter President",
-    image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800",
-    bio: "Leading with innovation and passion for technology",
-    funFact: "Completed 100 Days of Code challenge twice",
-    social: {
-      github: "#",
-      linkedin: "#",
-      twitter: "#",
-    },
+    name: "Ms.Manya Gidwani",
+    role: "Webmaster",
+    image: "/manya_gidwani.png",
+    designation: "Assistant Professor,SAKEC",
+  },
+  {
+    name: "Dr.Padmaja Joshi",
+    role: "Event Chair",
+    image: "/padmaja_joshi.png",
+    designation: "Scientist G and Head,C-DAC",
+  },
+  {
+    name: "Dr.Smita Bansod",
+    role: "Membership Chair",
+    image: "/smita_bansod.png",
+    designation: "Assistant Professor,SAKEC",
+  },
+  {
+    name: "Anita Devasthali",
+    role: "Technical Head",
+    image: "/anita_devasthali.png",
+    designation: "Business Analyst (C2),Tata Consultancy Services",
+  },
+  {
+    name: "Mr. Dhwaniket Kamble",
+    role: "Graphics Designer",
+    image: "/dhwaniket_kamble.png",
+    designation: "Assistant Professor,RAIT",
+  },
+  {
+    name: "Mr.Vaibhav Prakash Vasani",
+    role: "Public relation head",
+    image: "/vaibhav_prakash.png",
+    designation: "Assistant Professor,Somaiya Vidyavihar University",
   },
 ];
 
@@ -129,15 +118,14 @@ export const Teams = () => {
                     alt={member.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-                    <p className="text-white mb-4">{member.bio}</p>
-                    <p className="text-blue-400">Fun fact: {member.funFact}</p>
-                  </div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
-                  <p className="text-blue-500 mb-4">{member.role}</p>
-                  <div className="flex gap-4">
+                  <h3 className="text-blue-500 mb-2">{member.designation}</h3>
+                  <p className="text-blue-500 mb-3 font-semibold bg-blue-500/10 inline-block px-2 py-1 rounded">
+                    {member.role}
+                  </p>
+                  {/* <div className="flex gap-4">
                     {member.social.github && (
                       <a
                         href={member.social.github}
@@ -162,7 +150,7 @@ export const Teams = () => {
                         <Twitter className="w-5 h-5" />
                       </a>
                     )}
-                  </div>
+                  </div> */}
                 </div>
               </motion.div>
             ))}

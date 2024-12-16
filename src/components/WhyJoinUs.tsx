@@ -34,26 +34,26 @@ const benefits = [
   },
 ];
 
-const testimonials = [
-  {
-    name: "Shreedhar Joshi",
-    role: "Software Engineer",
-    company: "Tech Corp",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&h=300",
-    quote:
-      "Joining ACM was the best decision of my college career. The skills and connections I gained were invaluable.",
-  },
-  {
-    name: "Shreedhar Joshi",
-    role: "Software Engineer",
-    company: "Tech Corp",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&h=300",
-    quote:
-      "Joining ACM was the best decision of my college career. The skills and connections I gained were invaluable.",
-  },
-];
+// const testimonials = [
+//   {
+//     name: "Shreedhar Joshi",
+//     role: "Software Engineer",
+//     company: "Tech Corp",
+//     image:
+//       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&h=300",
+//     quote:
+//       "Joining ACM was the best decision of my college career. The skills and connections I gained were invaluable.",
+//   },
+//   {
+//     name: "Shreedhar Joshi",
+//     role: "Software Engineer",
+//     company: "Tech Corp",
+//     image:
+//       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&h=300",
+//     quote:
+//       "Joining ACM was the best decision of my college career. The skills and connections I gained were invaluable.",
+//   },
+// ];
 
 export const WhyJoinUs = () => {
   return (
@@ -97,7 +97,7 @@ export const WhyJoinUs = () => {
           ))}
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        {/* <div className="max-w-4xl mx-auto">
           <h3 className="text-2xl font-bold text-center mb-12 text-white">
             What Our Members Say
           </h3>
@@ -129,7 +129,7 @@ export const WhyJoinUs = () => {
               </motion.div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

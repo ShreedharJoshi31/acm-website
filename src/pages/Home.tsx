@@ -90,9 +90,9 @@ export const Home = () => {
       </section>
 
       <CoreDomains />
-      <Highlights />
+      {/* <Highlights /> */}
       <WhyJoinUs />
-      <Stats />
+      {/* <Stats /> */}
     </div>
   );
 };
