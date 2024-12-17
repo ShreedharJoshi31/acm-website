@@ -30,8 +30,8 @@ export const Home = () => {
                   ACM Professional Chapter
                 </span>
               </div> */}
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-                SAKEC ACM'S PROFESSIONAL CHAPTER
+              <h1 className="text-5xl md:text-7xl font-bold pb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+                Mumbai's ACM Professional Chapter
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
                 A community of curious minds pushing the boundaries of computer

@@ -10,11 +10,11 @@ export const AboutHero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto text-center"
+          className="max-w-4xl mx-auto text-center"
         >
           <Code2 className="w-16 h-16 text-blue-500 mx-auto mb-6" />
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            SAKEC ACM Professional Chapter
+            Mumbai's ACM Professional Chapter
           </h1>
           <p className="text-xl text-gray-300">
             A vibrant hub for computing professionals, academics, and students,
