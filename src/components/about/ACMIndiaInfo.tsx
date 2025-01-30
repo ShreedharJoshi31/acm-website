@@ -13,11 +13,11 @@ export const ACMIndiaInfo = () => {
         >
           <h2 className="text-3xl font-bold mb-8 text-center">ACM India Council</h2>
           <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700">
-            <p className="text-gray-300 text-lg leading-relaxed mb-6">
+            <p className="text-gray-300 text-lg leading-relaxed mb-6 text-justify">
               The ACM India Council was created by ACM to recognize and support Indian ACM members and activities. 
               It is an effort of ACM, aimed at increasing the level and visibility of ACM activities across India.
             </p>
-            <p className="text-gray-300 text-lg leading-relaxed">
+            <p className="text-gray-300 text-lg leading-relaxed text-justify">
               The ACM India Council activities, involving both academia and industry in computing, include research, 
               organization of high-quality computing conferences, advancing Computer Science education, and awards 
               to recognize achievement.

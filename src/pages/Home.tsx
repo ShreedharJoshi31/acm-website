@@ -1,20 +1,26 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ChevronRight, Code2 } from "lucide-react";
-import { CoreDomains } from "../components/CoreDomains";
-import { Highlights } from "../components/Highlights";
+import { ChevronRight } from "lucide-react";
 import { WhyJoinUs } from "../components/WhyJoinUs";
-import { Stats } from "../components/Stats";
-import { AnimatedHeroBackground } from "../components/AnimatedHeroBackground";
 import { useNavigate } from "react-router-dom";
+import { Navbar } from "../components/Navbar"; // Importing the Navbar component
 
 export const Home = () => {
   const navigate = useNavigate();
   return (
-    <div>
+    <div
+      style={{
+        backgroundImage: `url(/backgroundAbout.bmp)`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+      }}
+    >
+      <Navbar /> {/* Add the Navbar component here */}
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
-        <AnimatedHeroBackground />
+        {/* Removed the AnimatedHeroBackground to prevent any overlay effect */}
 
         {/* Content */}
         <div className="container mx-auto px-4 z-10">
@@ -24,16 +30,10 @@ export const Home = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              {/* <div className="flex items-center gap-2 mb-6">
-                <Code2 className="w-8 h-8 text-blue-500" />
-                <span className="text-xl font-semibold text-blue-500">
-                  ACM Professional Chapter
-                </span>
-              </div> */}
               <h1 className="text-5xl md:text-7xl font-bold pb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
-                Mumbai's ACM Professional Chapter
+                Mumbai ACM Professional Chapter
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+              <p className="text-xl md:text-2xl text-blue-900 mb-8 text-justify">
                 A community of curious minds pushing the boundaries of computer
                 science, where the minds Meet Technology for Groundbreaking
                 Ideas
@@ -59,11 +59,11 @@ export const Home = () => {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200"
+                  src="/homeimage.bmp"
                   alt="Tech collaboration"
                   className="w-full h-auto"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent" />
+                {/* Removed gradient overlay to ensure the original image color is visible */}
               </div>
               <motion.div
                 animate={{

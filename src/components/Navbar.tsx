@@ -19,8 +19,13 @@ export const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2">
-            <Code2 className="w-8 h-8 text-blue-500" />
-            <span className="text-xl font-bold">ACM Professional Chapter</span>
+            <img 
+              src="/ACM-logo.png" 
+              className="w-14 h-14 md:w-18 md:h-18 object-contain" 
+              alt="ACM Logo" 
+            />
+            {/*<Code2 className="w-8 h-8 text-blue-500" />*/}
+            <span className="text-xl font-bold">Mumbai ACM Professional Chapter</span>
           </Link>
 
           {/* Desktop Navigation */}

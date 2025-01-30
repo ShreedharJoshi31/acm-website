@@ -16,7 +16,7 @@ export const AnimatedBackground = () => {
           }}
         >
           <div
-            className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-blue-500"
+            className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-blue-300"
             style={{
               filter: 'blur(50px)',
             }}

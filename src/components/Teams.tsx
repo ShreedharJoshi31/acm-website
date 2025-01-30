@@ -8,27 +8,6 @@ const teamMembers = [
     image: "public/bhavesh_patel.png",
     funFact: "Completed 100 Days of Code challenge twice",
   },
-  {
-    name: "Michael Chen",
-    role: "Technical Lead",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&h=300",
-    funFact: "Built a robot that makes coffee",
-  },
-  {
-    name: "Emily Rodriguez",
-    role: "Events Coordinator",
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=300&h=300",
-    funFact: "Organized 20+ tech conferences",
-  },
-  {
-    name: "David Kim",
-    role: "Development Head",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&h=300",
-    funFact: "Published 3 mobile apps",
-  },
 ];
 
 export const Teams = () => {

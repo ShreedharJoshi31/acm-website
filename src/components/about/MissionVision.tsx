@@ -1,22 +1,27 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Target, Users, Lightbulb } from 'lucide-react';
+import { Target, Rocket } from 'lucide-react';
 
 const missions = [
   {
     icon: Target,
     title: 'Our Mission',
-    description: 'To build a thriving community of computing enthusiasts dedicated to collaboration, learning, and innovation across diverse areas of computer science and related fields.',
+    description: (
+      <ul className="list-disc pl-5 space-y-2 text-gray-300 text-justify">
+        <li>To nurture innovation and foster collaboration across computing disciplines.</li>
+        <li>To advance interdisciplinary computing by integrating diverse domains.</li>
+        <li>To promote excellence and sustainable technological solutions for the future.</li>
+      </ul>
+    ),
   },
   {
-    icon: Users,
+    icon: Rocket,
     title: 'Our Vision',
-    description: 'Creating an inclusive environment where computing professionals can grow, learn, and collaborate while making a meaningful impact on the local computing community.',
-  },
-  {
-    icon: Lightbulb,
-    title: 'Our Values',
-    description: 'We strive to enhance the skills and expertise of our members, foster research and technological advancements, and contribute positively to the local computing ecosystem.',
+    description:(
+      <ul className="list-disc pl-5 space-y-2 text-gray-300 text-justify">
+        <li>To nurture the ecosystem that fosters innovation, collaboration, excellence, and social responsibility in computing.</li>
+      </ul>
+    ),
   },
 ];
 
@@ -24,7 +29,7 @@ export const MissionVision = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-blue-900/20 to-purple-900/20">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {missions.map((item, index) => (
             <motion.div
               key={item.title}
@@ -35,7 +40,7 @@ export const MissionVision = () => {
             >
               <item.icon className="w-12 h-12 text-blue-500 mb-6" />
               <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
-              <p className="text-gray-300">{item.description}</p>
+              <div className="text-gray-300">{item.description}</div>
             </motion.div>
           ))}
         </div>

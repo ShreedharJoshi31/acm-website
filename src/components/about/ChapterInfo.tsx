@@ -12,7 +12,7 @@ export const ChapterInfo = () => {
           className="max-w-4xl mx-auto"
         >
           <div className="prose prose-lg prose-invert mx-auto">
-            <p className="text-gray-300 text-lg leading-relaxed mb-6">
+            <p className="text-gray-300 text-lg leading-relaxed mb-6 text-justify">
               The Mumbai's ACM Professional Chapter serves as a dynamic platform
               for computing professionals, academics, and students within the
               local community. As part of the renowned Association for Computing
@@ -20,7 +20,7 @@ export const ChapterInfo = () => {
               professional development, and networking opportunities for our
               members.
             </p>
-            <p className="text-gray-300 text-lg leading-relaxed">
+            <p className="text-gray-300 text-lg leading-relaxed text-justify">
               At the Mumbai's ACM Professional Chapter, we aim to create an
               inclusive environment where computing professionals can grow,
               learn, and collaborate. Through a wide array of activities and
