@@ -34,7 +34,7 @@ const Timeline = () => {
                     </h3>
                     <p className="text-gray-700 mt-2">
                         Complete the registration by filling out the
-                        <a href="YOUR_GOOGLE_FORM_LINK" className="text-blue-500 underline"> Mumbai ACM Chapter Google Form</a>.
+                        <a href="https://forms.gle/p1rsXtpgBnzKF4Xn7" className="text-blue-500 underline"> Mumbai ACM Chapter Google Form</a>.
                     </p>
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
