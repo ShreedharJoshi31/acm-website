@@ -51,9 +51,11 @@ export const Navbar = () => {
                 />
               </Link>
             ))}
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors">
-              Join Us
-            </button>
+            <Link to="/joinus">
+              <button className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors">
+                Join Us
+              </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -86,9 +88,11 @@ export const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            <button className="w-full bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors mt-4">
-              Join Us
-            </button>
+            <Link to="/joinus">
+              <button className="w-full bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors mt-4">
+                Join Us
+              </button>
+            </Link>
           </motion.div>
         )}
       </div>

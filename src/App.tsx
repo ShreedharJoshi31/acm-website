@@ -6,6 +6,7 @@ import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Events } from "./pages/Events";
 import { Teams } from "./pages/Teams";
+import { JoinUs } from "./pages/JoinUs";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/about" element={<About />} />
           {/* <Route path="/events" element={<Events />} /> */}
           <Route path="/teams" element={<Teams />} />
+          <Route path="/joinus" element={<JoinUs />} />
         </Routes>
         <Footer />
       </div>
