@@ -69,7 +69,7 @@ const teamMembers = [
   },
   {
     name: "Mr. Manoj Dhande",
-    role: "Position",
+    role: "Publicity Head",
     image: "/manoj-dhande.jpg",
     designation: "Assistant Professor\nSAKEC",
   },
@@ -77,15 +77,16 @@ const teamMembers = [
 
 export const Teams = () => {
   return (
-    <div className="pt-16">
-      <section
-        className="relative py-2 bg-gradient-to-br from-blue-900/20 to-purple-900/20"
-        style={{
-          backgroundImage: `url(/backgroundAbout.bmp)`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
+    <div
+      className="pt-16"
+      style={{
+        backgroundImage: `url(/backgroundAbout.bmp)`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+      }}
+    >
+      <section className="relative py-2 bg-transparent">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -99,7 +100,7 @@ export const Teams = () => {
               alt="ACM Logo"
             />
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-900">
+          <h1 className="text-4xl md:text-7xl font-bold mb-6 text-blue-900">
             Meet Our Team
           </h1>
           <p className="text-xl text-blue-900 font-semibold">
@@ -130,7 +131,7 @@ export const Teams = () => {
                   visible: { opacity: 1, y: 0 },
                 }}
                 transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
-                className="bg-gray-800 rounded-xl overflow-hidden group shadow-xl transform hover:scale-105 transition-all duration-300"
+                className="bg-transparent rounded-xl overflow-hidden group shadow-xl transform hover:scale-105 transition-all duration-300"
               >
                 <div className="aspect-square relative overflow-hidden">
                   <img
@@ -140,9 +141,9 @@ export const Teams = () => {
                   />
                 </div>
                 <div className="p-4 flex flex-col items-center text-center h-28 justify-between">
-                  <h3 className="text-lg font-semibold text-white truncate w-full">{member.name}</h3>
-                  <p className="text-xs text-white whitespace-pre-line w-full">{member.designation}</p>
-                  <p className="text-xs text-white font-semibold bg-blue-500/20 inline-block px-3 py-1 rounded">
+                  <h3 className="text-lg font-semibold text-black truncate w-full">{member.name}</h3>
+                  <p className="text-xs text-black whitespace-pre-line w-full">{member.designation}</p>
+                  <p className="text-xs text-black font-semibold bg-blue-500/20 inline-block px-3 py-1 rounded">
                     {member.role}
                   </p>
                 </div>

@@ -1,10 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import { Linkedin, Facebook, Instagram, Twitter, Mail } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 text-white py-5">
+    <footer className="bg-gray-900/80 text-white py-5">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center">
           <div className="flex items-center gap-4">

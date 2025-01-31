@@ -8,7 +8,15 @@ import { MissionVision } from "../components/about/MissionVision";
 
 export const About = () => {
   return (
-    <div className="pt-16">
+    <div
+      className="pt-16"
+      style={{
+        backgroundImage: `url(/backgroundAbout.bmp)`,
+        backgroundSize: "contain", // Ensures the background image is not zoomed in
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+      }}
+    >
       <AboutHero />
       <ChapterInfo />
       <MissionVision />

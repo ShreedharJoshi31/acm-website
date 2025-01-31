@@ -27,8 +27,9 @@ const missions = [
 
 export const MissionVision = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-900/20 to-purple-900/20">
+    <section className="py-20 bg-transparent">
       <div className="container mx-auto px-4">
+      <h1 className='font-bold text-blue-900 text-center text-5xl mb-10'>Defining Our Path</h1>
         <div className="grid md:grid-cols-2 gap-8">
           {missions.map((item, index) => (
             <motion.div
@@ -36,7 +37,7 @@ export const MissionVision = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
+              className="bg-gray-800 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
             >
               <item.icon className="w-12 h-12 text-blue-500 mb-6" />
               <h3 className="text-xl font-semibold mb-4">{item.title}</h3>

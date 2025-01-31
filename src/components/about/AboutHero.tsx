@@ -4,13 +4,7 @@ import { Code2 } from "lucide-react";
 
 export const AboutHero = () => {
   return (
-    <section className="relative py-1 bg-gradient-to-br from-blue-900/20 to-purple-900/20"
-      style={{
-        backgroundImage: `url(/backgroundAbout.bmp)`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <section className="relative py-1 bg-transparent">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

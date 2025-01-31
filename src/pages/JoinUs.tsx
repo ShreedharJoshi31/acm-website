@@ -4,15 +4,16 @@ import TimelineJoinUs from "../components/TimelineJoinUs"; // Adjusted relative 
 
 export const JoinUs = () => {
   return (
-    <div className="pt-16">
-      <section
-        className="relative py-2 bg-gradient-to-br from-blue-900/20 to-purple-900/20"
-        style={{
-          backgroundImage: `url(/backgroundAbout.bmp)`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
+    <div
+      className="pt-16"
+      style={{
+        backgroundImage: `url(/backgroundAbout.bmp)`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+      }}
+    >
+      <section className="relative py-2 bg-transparent">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -26,7 +27,10 @@ export const JoinUs = () => {
               alt="ACM Logo"
             />
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-900">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-blue-900 ml-20 mr-20">
+            Join Us
+          </h1>
+          <h1 className="text-3xl md:text-xl font-semibold mb-6 text-blue-900 ml-20 mr-20">
             Become a Member and Connect with the Mumbai ACM Chapter
           </h1>
         </motion.div>

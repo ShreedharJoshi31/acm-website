@@ -30,8 +30,8 @@ export const ACMInfo = () => {
           transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl font-bold mb-8 text-center">What is ACM Professional Chapter?</h2>
-          <p className="text-gray-300 text-lg leading-relaxed mb-12 text-justify">
+          <h2 className="text-3xl  text-blue-900 font-bold mb-8 text-center">What is ACM Professional Chapter?</h2>
+          <p className="text-black text-lg leading-relaxed mb-12 text-justify">
             ACM brings together computing educators, researchers, and professionals to inspire dialogue, 
             share resources, and address the field's challenges. As the world's largest computing society, 
             ACM strengthens the profession's collective voice through strong leadership, promotion of the 

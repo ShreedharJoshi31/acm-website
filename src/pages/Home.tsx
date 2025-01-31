@@ -16,7 +16,7 @@ export const Home = () => {
         backgroundAttachment: "fixed",
       }}
     >
-      <Navbar /> {/* Add the Navbar component here */}
+      
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
@@ -33,7 +33,7 @@ export const Home = () => {
               <h1 className="text-5xl md:text-7xl font-bold pb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
                 Mumbai ACM Professional Chapter
               </h1>
-              <p className="text-xl md:text-2xl text-blue-900 mb-8 text-justify">
+              <p className="text-xl md:text-xl text-blue-900 mb-8 text-justify">
                 A community of curious minds pushing the boundaries of computer
                 science, where the minds Meet Technology for Groundbreaking
                 Ideas
@@ -65,7 +65,7 @@ export const Home = () => {
                 />
                 {/* Removed gradient overlay to ensure the original image color is visible */}
               </div>
-              <motion.div
+              {/*<motion.div
                 animate={{
                   scale: [1, 1.1, 1],
                   rotate: [0, 1, -1, 0],
@@ -89,7 +89,7 @@ export const Home = () => {
                   delay: 0.5,
                 }}
                 className="absolute -bottom-4 -left-4 w-24 h-24 bg-purple-500/20 rounded-full backdrop-blur-xl"
-              />
+              />*/}
             </motion.div>
           </div>
         </div>
