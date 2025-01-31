@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 const teamMembers = [
@@ -11,7 +10,7 @@ const teamMembers = [
   {
     name: "Ms. Swati Nadkarni",
     role: "Chapter President",
-    image: "/swati_nadkarni.png",
+    image: "/Swati-nadkarni.jpg",
     designation: "Associate Professor\nSAKEC",
   },
   {
@@ -35,7 +34,7 @@ const teamMembers = [
   {
     name: "Ms. Manya Gidwani",
     role: "Webmaster",
-    image: "/manya_gidwani.png",
+    image: "/Manya-Gidwani.jpg",
     designation: "Assistant Professor\nSAKEC",
   },
   {
