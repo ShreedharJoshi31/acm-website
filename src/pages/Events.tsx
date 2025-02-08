@@ -1,9 +1,19 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Calendar, MapPin, Clock, Code2 } from "lucide-react";
+import { Calendar, MapPin, Clock } from "lucide-react";
 import { EventModal } from "../components/EventModal";
 
-const events = [
+interface Event {
+  title: string;
+  date: string;
+  time: string;
+  location: string;
+  description: string;
+  image: string;
+  category: string;
+}
+
+const events: Event[] = [
   {
     title: "Hackathon 2024",
     date: "2024-04-15",
@@ -51,17 +61,22 @@ const events = [
 ];
 
 export const Events = () => {
-  const [selectedEvent, setSelectedEvent] = useState(null);
+  const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
 
   return (
-    <div className="pt-16">
-      <EventModal
-        event={selectedEvent}
-        onClose={() => setSelectedEvent(null)}
-      />
+    <div
+      style={{
+        backgroundImage: `url(/backgroundAbout.bmp)`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+      }}
+      className="pt-16"
+    >
+      <EventModal event={selectedEvent} onClose={() => setSelectedEvent(null)} />
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-blue-900/20 to-purple-900/20">
+      <section className="relative bg-transparent">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -69,11 +84,18 @@ export const Events = () => {
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <Code2 className="w-16 h-16 text-blue-500 mx-auto mb-6" />
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            {/*<Code2 className="w-16 h-16 text-blue-500 mx-auto mb-6" />*/}
+            <div className="flex justify-center mb-2">
+            <img
+              src="/ACM-logo.png"
+              className="w-52 h-52 md:w-60 md:h-60 object-contain"
+              alt="ACM Logo"
+            />
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-900">
               Upcoming Events
             </h1>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-blue-900">
               Join us for exciting events, workshops, and competitions designed
               to enhance your skills and expand your network.
             </p>
@@ -105,9 +127,7 @@ export const Events = () => {
                     {event.category}
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <h3 className="text-xl font-semibold mb-4">
-                      {event.title}
-                    </h3>
+                    <h3 className="text-xl font-semibold mb-4 text-white">{event.title}</h3>
                     <div className="space-y-2 text-gray-400">
                       <div className="flex items-center gap-2">
                         <Calendar className="w-4 h-4" />

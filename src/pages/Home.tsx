@@ -1,9 +1,8 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import { WhyJoinUs } from "../components/WhyJoinUs";
 import { useNavigate } from "react-router-dom";
-import { Navbar } from "../components/Navbar"; // Importing the Navbar component
+import { Carousel } from "../components/Carousel";
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -16,8 +15,6 @@ export const Home = () => {
         backgroundAttachment: "fixed",
       }}
     >
-      
-
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
         {/* Removed the AnimatedHeroBackground to prevent any overlay effect */}
@@ -57,14 +54,7 @@ export const Home = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="relative"
             >
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="/homeimage.bmp"
-                  alt="Tech collaboration"
-                  className="w-full h-auto"
-                />
-                {/* Removed gradient overlay to ensure the original image color is visible */}
-              </div>
+              <Carousel />
               {/*<motion.div
                 animate={{
                   scale: [1, 1.1, 1],

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Code2 } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 
 export const Navbar = () => {
@@ -10,7 +10,7 @@ export const Navbar = () => {
   const links = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
-    // { href: "/events", label: "Events" },
+    { href: "/events", label: "Events" },
     { href: "/teams", label: "Teams" },
   ];
 
