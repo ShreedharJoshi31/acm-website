@@ -9,7 +9,7 @@ const teamMembers = [
   },
   {
     name: "Ms. Swati Nadkarni",
-    role: "Chapter President",
+    role: "Vice Chair",
     image: "/Swati-nadkarni.jpg",
     designation: "Associate Professor\nSAKEC",
   },

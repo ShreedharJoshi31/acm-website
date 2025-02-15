@@ -31,8 +31,9 @@ export const EventModal = ({ event, onClose }: EventModalProps) => {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.9 }}
           className="relative w-full max-w-2xl bg-gray-900 rounded-2xl overflow-hidden"
-          onClick={e => e.stopPropagation()}
+          onClick={(e) => e.stopPropagation()}
         >
+          {/* Close Button */}
           <button
             onClick={onClose}
             className="absolute top-4 right-4 p-2 rounded-full bg-gray-800/50 backdrop-blur-sm text-gray-400 hover:text-white transition-colors z-10"
@@ -40,6 +41,7 @@ export const EventModal = ({ event, onClose }: EventModalProps) => {
             <X className="w-5 h-5" />
           </button>
 
+          {/* Event Image */}
           <div className="relative h-64">
             <img
               src={event.image}
@@ -52,9 +54,11 @@ export const EventModal = ({ event, onClose }: EventModalProps) => {
             </div>
           </div>
 
+          {/* Event Details */}
           <div className="p-6">
             <h3 className="text-2xl font-bold mb-4">{event.title}</h3>
-            
+
+            {/* Event Info */}
             <div className="grid grid-cols-3 gap-4 mb-6">
               <div className="flex items-center gap-2 text-gray-400">
                 <Calendar className="w-4 h-4" />
@@ -70,14 +74,11 @@ export const EventModal = ({ event, onClose }: EventModalProps) => {
               </div>
             </div>
 
+            {/* Event Description */}
             <p className="text-gray-300 mb-6">{event.description}</p>
-
-            <button className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
-              Register Now
-            </button>
           </div>
         </motion.div>
       </motion.div>
     </AnimatePresence>
   );
-}
+};

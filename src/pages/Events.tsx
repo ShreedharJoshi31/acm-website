@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Calendar, MapPin, Clock } from "lucide-react";
+import { Calendar, MapPin, Clock, ArrowRight } from "lucide-react";
 import { EventModal } from "../components/EventModal";
 
 interface Event {
@@ -11,62 +11,41 @@ interface Event {
   description: string;
   image: string;
   category: string;
+  link?: string;
+  backgroundImage?: string;
 }
 
 const events: Event[] = [
   {
-    title: "Hackathon 2024",
-    date: "2024-04-15",
-    time: "09:00 AM",
-    location: "Main Campus Hall",
-    description:
-      "Join us for an exciting 24-hour coding challenge where you'll work with talented developers to build innovative solutions. Network with industry professionals, win amazing prizes, and showcase your skills!",
-    image:
-      "https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=800",
-    category: "Competition",
-  },
-  {
-    title: "AI Workshop Series",
-    date: "2024-04-20",
-    time: "02:00 PM",
-    location: "Tech Lab 101",
-    description:
-      "Dive deep into the world of artificial intelligence with our comprehensive workshop series. Learn about machine learning algorithms, neural networks, and practical applications of AI in today's technology landscape.",
-    image:
-      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800",
-    category: "Workshop",
-  },
-  {
-    title: "Tech Talk: Future of Cloud",
-    date: "2024-04-25",
-    time: "04:00 PM",
-    location: "Virtual Event",
-    description:
-      "Join leading cloud computing experts as they discuss emerging trends, best practices, and the future of cloud technology. Perfect for both beginners and experienced professionals looking to stay ahead in the field.",
-    image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800",
-    category: "Talk",
-  },
-  {
-    title: "Code Sprint Challenge",
-    date: "2024-05-01",
+    title: "Mumbai ACM Professional Chapter Inauguration",
+    date: "2025-02-01",
     time: "10:00 AM",
-    location: "Computer Lab A",
+    location: "Shah & Anchor Kutchhi Engineering College, Mumbai",
     description:
-      "Test your programming skills in this fast-paced coding competition. Solve algorithmic challenges, optimize your code, and compete with fellow developers. Suitable for all skill levels with different difficulty categories.",
-    image:
-      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800",
-    category: "Competition",
+      "The Mumbai ACM Professional Chapter was officially inaugurated on February 1, 2025, featuring talks by industry leaders like Dr. M. Sashikumar and Mr. Yati Gharat.",
+    image: '/inaug_event.jpg',
+    category: "Inauguration",
+    link: "https://www.linkedin.com/posts/acm-mumbaichapter_acm-acmindia-mumbaiacm-activity-7293174346976575489-R2NB/?utm_source=share&utm_medium=member_ios&rcm=ACoAAD_mMwwBoMriOs8ZEW88uu-2YJ3Qwd470xU",
+    backgroundImage: "/inaug_event.jpg",
   },
+  
 ];
+
+const getFilteredEvents = (tab: string) => {
+  const today = new Date().toISOString().split("T")[0];
+  if (tab === "Past") return events.filter((event) => event.date < today);
+  if (tab === "Ongoing") return events.filter((event) => event.date === today);
+  return events.filter((event) => event.date > today);
+};
 
 export const Events = () => {
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
+  const [activeTab, setActiveTab] = useState("Upcoming");
 
   return (
     <div
       style={{
-        backgroundImage: `url(/backgroundAbout.bmp)`,
+        backgroundImage: `url('/backgroundAbout.bmp')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -77,37 +56,32 @@ export const Events = () => {
 
       {/* Hero Section */}
       <section className="relative bg-transparent">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto text-center"
-          >
-            {/*<Code2 className="w-16 h-16 text-blue-500 mx-auto mb-6" />*/}
-            <div className="flex justify-center mb-2">
-            <img
-              src="/ACM-logo.png"
-              className="w-52 h-52 md:w-60 md:h-60 object-contain"
-              alt="ACM Logo"
-            />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-900">
-              Upcoming Events
-            </h1>
-            <p className="text-xl text-blue-900">
-              Join us for exciting events, workshops, and competitions designed
-              to enhance your skills and expand your network.
-            </p>
-          </motion.div>
+        <div className="container mx-auto px-4 text-center">
+          <img src="/ACM-logo.png" className="w-52 h-52 md:w-60 md:h-60 object-contain mx-auto mb-2" alt="ACM Logo" />
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-900">{activeTab} Events</h1>
         </div>
       </section>
 
+      {/* Tabs */}
+      <div className="flex justify-center gap-4 my-6">
+        {["Past", "Ongoing", "Upcoming"].map((tab) => (
+          <button
+            key={tab}
+            className={`px-6 py-2 rounded-lg text-lg font-semibold ${
+              activeTab === tab ? "bg-blue-600 text-white" : "bg-gray-200 text-blue-900"
+            }`}
+            onClick={() => setActiveTab(tab)}
+          >
+            {tab}
+          </button>
+        ))}
+      </div>
+
       {/* Events Grid */}
-      <section className="py-20">
+      <section className="py-10">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {events.map((event, index) => (
+            {getFilteredEvents(activeTab).map((event, index) => (
               <motion.div
                 key={event.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -116,7 +90,14 @@ export const Events = () => {
                 className="group cursor-pointer"
                 onClick={() => setSelectedEvent(event)}
               >
-                <div className="relative h-80 rounded-xl overflow-hidden">
+                <div
+                  className="relative h-80 rounded-xl overflow-hidden"
+                  style={
+                    event.backgroundImage
+                      ? { backgroundImage: `url(${event.backgroundImage})`, backgroundSize: "cover", backgroundPosition: "center" }
+                      : {}
+                  }
+                >
                   <img
                     src={event.image}
                     alt={event.title}
@@ -142,6 +123,17 @@ export const Events = () => {
                         <span>{event.location}</span>
                       </div>
                     </div>
+                    {/* Know More Button */}
+                    {event.link && (
+                      <a
+                        href={event.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-4 inline-flex items-center text-blue-300 hover:text-blue-500 transition"
+                      >
+                        Know More <ArrowRight className="ml-2 w-4 h-4" />
+                      </a>
+                    )}
                   </div>
                 </div>
               </motion.div>
